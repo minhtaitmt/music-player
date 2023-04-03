@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <header class="header">
+                <p class="status">Now playing</p>
+                <h3 class="song-title">Song Name</h3>
+            </header>
+
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url('/assets/img/only-LeeHi.jpg');"></div>
+            </div>
+
+            <div class="control-container">
+                <i class="ri-repeat-2-line control-btn" id="repeat"></i>
+                <i class="ri-skip-back-mini-line skip control-btn" id="prev"></i>
+                <i class="ri-play-circle-fill play-btn"></i>
+                <i class="ri-skip-forward-mini-line skip control-btn" id="next"></i>
+                <i class="ri-shuffle-fill control-btn" id="shuffle"></i>
+            </div>
+
+            <input type="range" min="1" max="100" value="1" step="1" class="slider" id="progress">
+        </div>
+        <div class="play-list" id="playList">
+        
+        </div>
+        <audio src="" id="audio"></audio>
+    </div>
+</body>
+<script src="assets/javascript/main.js"></script>
+</html>

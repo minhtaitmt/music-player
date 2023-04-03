@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 380px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px grey;
+    padding: 1rem 1rem;
+    background-color: whitesmoke;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    position: fixed;
+    z-index: 100;
+    width: 380px;
+    margin: auto;
+    padding: 2rem 3rem; 
+    left: 50%;
+    top: 0;
+    margin-left: -190px;
+    background-color: white;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.status{
+    font-size: 10px;
+    font-weight: 600;
+    color: red;
+}
+
+.song-title{
+    font-size: 18px;
+}
+
+.cd{
+    display: flex;
+    margin: auto;
+    width: 200px;
+}
+
+.cd-thumb{
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+    transition: 1s;
+}
+
+.spinner{
+    animation: spin 1s linear infinite;
+    animation-duration: 8s;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+.control-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-btn{
+    font-size: 20px;
+    cursor: pointer;
+    opacity: .6;
+    transition: .3s;
+}
+
+.active-btn{
+    font-weight: 700;
+    opacity: 1;
+}
+
+.skip{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.play-btn{
+    font-size: 60px;
+    color: red;
+    border-radius: 50%;
+    transition: 1s;
+    cursor: pointer;
+    
+    /* box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3); */
+}
+
+.slider{
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 5px; /* Specified height */
+    background: lightgray; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 6px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: red; /* Green background */
+    border-radius: 5px;
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+.play-list{
+    margin-top: 415px;
+    display: flex;
+    flex-direction: column;
+    row-gap: .7rem;
+}
+
+.song-item{
+    background-color: white;
+    padding: .5rem;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    transform: .1s;
+}
+
+.song-item:active{
+    opacity: .8;
+}
+
+
+.song-active .singer ,
+.song-active .option-btn ,
+.song-active{
+    background-color: red;
+    opacity: 1;
+    color: whitesmoke
+    
+}
+
+.img-container{
+    display: flex;
+    /* margin: auto; */
+    width: 50px;
+    margin-left: 10px;
+}
+
+.img{
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+.item-content{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    margin-left: 20px;
+}
+
+.song-name{
+    font-size: 18px;
+}
+
+.singer{
+    font-size: 12px;
+    font-weight: 600;
+    opacity: .5;
+}
+
+.option-btn{
+    margin-left: auto;
+    font-size: 30px;
+    opacity: .5;
+    display: flex;
+}
+
+.option-btn:hover{
+    opacity: 8;
+    cursor: pointer;
+}
+
